@@ -1,0 +1,157 @@
+				                          	Assignment 1
+				                              CIS 11
+
+1.1.3
+
+1.) An assembler converts source code programs from assembly language into machine language. A linker then combines everything created by an assembler into one program that is able to run.
+
+3.) In Assembly language it is one to one so a single statement in assembly has only one single machine instruction. However, a one to many relationship is one that has a single statement that is expanded into multiple machine instructions.
+
+8.) Type checking on pointer variables is more restrictive in C and C++ than Assembly. C++ does not allow a pointer of one type to be assigned to a pointer of another type. However, assembly language doesn’t have these restrictions as such the high level languages are more restrictive.
+
+12.) X = (Y*4) + 3
+
+Int Y;
+Int X = (Y * 4) + 3
+
+mov eax, Y
+mov ebx, 4
+imul, ebx
+add eax, 3
+mov X,eax
+
+1.2.1
+
+2.) Translated programs can be converted into an machine language program by a machine language program designed for that purpose. Resulting in that the machine language program can be executed directly on the computer hardware. When Interpreting a program, the programs individual instructions have to be decoded and then executed by a program written in machine language.
+
+3.) True.
+
+10.) Level 2.
+
+1.3.9
+
+2.)
+	A.) 2^3 = 8, 2^4 = 16, 2^5 = 32, 2^6 = 64, 2^7 = 128. 8+16+32+64+128 = 248.
+	B.) 2^1 = 2, 2^3 = 8, 2^6 = 64, 2^7 = 128. 2+8+64+128 = 202.
+	C.) 2^4 = 16, 2^5 = 32, 2^6 = 64, 2^7 = 128. 16+32+64+128 = 240.
+
+3.)
+	A.) 00010001
+	B.) 101000000
+	C.) 00011110
+                
+5.)
+	A.) 7
+	B.) 9
+	C.) 15
+
+6.)
+	A.) 35DA
+	B.) CEA3
+	C.) FEDB
+
+7.)
+
+	A.) 1010 0100 0110 1001 0011 1111 1011 1100
+	B.) 1011 0110 1001 0111 1100  0111 1010 0001
+	C.) 0010 1011 0011 1101 1001 0100 0110 0001
+
+1.7.1
+
+1.) 8
+2.)
+	A.) 53
+	B.) 150
+	C.) 204
+
+3.)
+	A.) 110001010
+	B.) 110010110
+	C.) 100100001
+
+4.) 00000110
+
+5.)
+	A.) 16
+	B.) 32
+	C.) 64
+	D.) 128
+
+6.)
+	A.) 12
+	B.) 16
+	C.) 16
+
+7.)
+	A.) 35DA
+	B.) CEA3
+	C.) FEDB
+
+8.)
+	A.) 0000 0001 0010 0110 1111 1001 1101 0100
+	B.) 0110 1010 1100 1101  1111 1010 1001 0101
+	C.) 1111  0110 1001 1011 1101 1100 0010 0000
+
+9.)
+	A.) 58
+	B.) 447
+	C.) 4097
+
+10.)
+	A.) 98
+	B.) 1203
+	C.) 671
+
+11.) 
+	A.) FFE8
+	B.) FEB5
+
+12.)
+	A.) FFEB
+	B.) FFD3
+
+13.)
+	A.) 27641
+	B.) -16093
+
+14.)
+	A.) 19666
+	B.) -32208
+
+15.)
+	A.) -75
+	B.) 42
+	C.) -16
+
+16.)
+	A.) -128
+	B.) -52
+	C.) -73
+
+17.)
+	A.) 11111011
+	B.) 11010110
+	C.) 1110000
+
+18.)
+	A.) 10111000
+	B.) 10011110
+	C.) 11100110
+
+19.)
+	A.) AB2
+	B.) 1106
+
+20.)
+	A.) B82
+	B.) 1316
+
+21.) 42h and 66d
+
+22.) 47h and 71d
+
+25.)  A   B    AVB   -(AVB)
+      T   F     T       T
+      T   T     T       T
+      F   T     T       T
+      F   F     F       F
