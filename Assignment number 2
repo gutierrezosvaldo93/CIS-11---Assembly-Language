@@ -1,0 +1,48 @@
+					Assignment 2
+					CIS 11
+
+
+2.1.5
+
+1.) Contains registers to a high-frequency clock, the control unit (CU), and the arithmetic logic unit (ALU).
+
+2.)CPU is attached via pins connected to the data bus, control bus, and the address bus.
+
+3.) Reading a single value from memory involves four separate steps. Each step takes one clock cycle while accessing registers only takes one clock cycle in total instead of 4 steps.
+
+4.) Fetch, Decode, and Execute.
+
+5.) First step is the CPU fetches the operands from registers and memory. Sometimes involving address calculations. Second the CPU stores the results of its execution in the operand after the CPU executes the instruction.
+
+2.4.3 
+
+5.) Handles external interrupts from hardware devices. These interrupts the CPU and make it process their requests immediately.
+
+2.5.2 
+
+1.) Level 2
+
+3.) Allows the operating system to communicate directly with the hardware devices and the system BIOS as each device is different.
+
+4.) Level 1 is between the video controller card and the operating system which is the BIOS function.
+
+5.) No, the same BIOS would work for both operating systems.
+
+2.8 Review 
+
+7.) The arithmetic logic unit (ALU)
+
+8.) 80-bit
+
+9.) True
+
+10.) False
+
+12.) False 
+19.) False
+
+20.) False
+
+25.) Levels 1-3.
+
+26.) Game programs will often try to take full advantage of the latest features in specialized sound cards. This is why they will send the output directly the sound cards hardware.
