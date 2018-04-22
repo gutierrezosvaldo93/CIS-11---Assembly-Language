@@ -84,14 +84,14 @@ ArraySize = ($ - myArray)
 
 5.) Explain the difference between big endian and little endian. Also, look up the origins of this term on the Web?
 
-	Little-endian stores and retrieves data from memory from low to high. The least significant byte is stored at the 	  first memory address allocated for the data.Remaining bytes are stored in the next consecutive memory positions.
+	Little-endian stores and retrieves data from memory from low to high. The least significant byte is stored at the first memory address allocated for the data.Remaining bytes are stored in the next consecutive memory positions.
 	Big-endian order is the opposite it goes form high to low. The highest significant byte is stored at the first
 	memory address allocated for the data. Remaining bytes are stored in the next consecutive memory positions.
 
 
 6.) Why might you use a symbolic constant rather than an integer literal in your code?
 	
-	When the constant will be changing a lot through the whole code, it’s much easier to change as a symbolic constant 	   in one place. Instead of searching the code for all the instances in the code of that constant.
+	When the constant will be changing a lot through the whole code, it’s much easier to change as a symbolic constant in one place. Instead of searching the code for all the instances in the code of that constant.
 
 25.) Which data directive creates a 32-bit signed integer variable?
 
