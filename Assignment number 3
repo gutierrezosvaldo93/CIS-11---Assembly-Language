@@ -4,7 +4,7 @@
 
 1.) Using the value -35, write it as an integer literal in decimal, hexadecimal, octal, and binary formats that are consistent with MASM syntax?
 
-	 -35 or -35d for decimal. -35h for hexadecimal, -35q or -35o for octal, 11011101b 		for binary.
+	 -35 or -35d for decimal. -35h for hexadecimal, -35q or -35o for octal, 11011101b for binary.
 
 2.) (Yes/No): Is A5h a valid hexadecimal literal?
 
@@ -32,7 +32,7 @@
 
 1.) What types of files are produced by the assembler?
 
-	 A file containing machine language called an object file. Optionally it produces a 		listing file. After it passes to the linker which then produces an executable file.
+	 A file containing machine language called an object file. Optionally it produces a listing file. After it passes to the linker which then produces an executable file.
 
 2.) (True/False): The linker extracts assembled procedures from the link library and inserts them in the executable program?
 
@@ -80,17 +80,18 @@ ArraySize = ($ - myArray)
 
 4.) Explain why the term assembler language is not quite correct?
 
-	An assembler is a program that translates your source code so it’s not the actual 		language. It’s more like a compiler for higher level languages. 
+	An assembler is a program that translates your source code so it’s not the actual language. It’s more like a compiler for higher level languages. 
 
 5.) Explain the difference between big endian and little endian. Also, look up the origins of this term on the Web?
 
-	Little-endian stores and retrieves data from memory from low to high. The least 		significant byte is stored at the first memory address allocated for the data. 		Remaining bytes are stored in the next consecutive memory positions.
-	Big-endian order is the opposite it goes form high to low. The highest significant 		byte is stored at the first memory address allocated for the data. Remaining bytes 	are stored in the next consecutive memory positions.
+	Little-endian stores and retrieves data from memory from low to high. The least significant byte is stored at the 	  first memory address allocated for the data.Remaining bytes are stored in the next consecutive memory positions.
+	Big-endian order is the opposite it goes form high to low. The highest significant byte is stored at the first
+	memory address allocated for the data. Remaining bytes are stored in the next consecutive memory positions.
 
 
 6.) Why might you use a symbolic constant rather than an integer literal in your code?
 	
-	When the constant will be changing a lot through the whole code, it’s much 		easier to change as a symbolic constant in one place. Instead of searching the 		code for all the instances in the code of that constant.
+	When the constant will be changing a lot through the whole code, it’s much easier to change as a symbolic constant 	   in one place. Instead of searching the code for all the instances in the code of that constant.
 
 25.) Which data directive creates a 32-bit signed integer variable?
 
@@ -100,7 +101,7 @@ ArraySize = ($ - myArray)
 
 4.) Find out if you can declare a variable of type DWORD and assign it a negative value. What does this tell you about the assembler’s type checking?
 
-	You could assign it a negative value although there will be no enforcement of the 		sign by the assembler because, it assumes the number is not in the twos 			compliment form.
+	You could assign it a negative value although there will be no enforcement of the sign by the assembler because, it assumes the number is not in the twos compliment form.
 
 7.) Declare an array of 120 uninitialized unsigned double word values?
 
