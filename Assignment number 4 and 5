@@ -38,8 +38,8 @@ val4 WORD 7FFFh
 	
 	mov ax, 7ff0h
 	add  al, 10h		          ; a. CF = 1	  SF = 0    ZF = 1    OF = 0
-	add ah, 1                 ; b. CF = 0 	SF = 1 	  ZF = 0 	  OF = 1
-	add ax, 2                 ; c. CF = 0 	SF = 1		ZF = 0		OF = 0
+	add ah, 1                 	  ; b. CF = 0 	  SF = 1    ZF = 0    OF = 1
+	add ax, 2                         ; c. CF = 0 	  SF = 1    ZF = 0    OF = 0
 
 4.3.8
 
@@ -81,10 +81,10 @@ Use the following data definitions for Question 5
 	mov   al, [esi]						      ; a.	AL = 10h
 	mov   al, [esi+3]					      ; b.	AL = 40h
 	mov   esi, OFFSET myWords + 2
-	mov   ax, [esi]					        ; c.	AX = 003Bh
+	mov   ax, [esi]					              ; c.      AX = 003Bh
 	mov edi, 8
-	mov edx, [myDoubles + edi]			; d.	EDX = 3
-	mov edx, myDoubles [edi]				; e.	EDX = 3
+	mov edx, [myDoubles + edi]			              ; d.	EDX = 3
+	mov edx, myDoubles [edi]				      ; e.	EDX = 3
 	mov ebx, myPointer
 	mov eax, [ebx+4]					      ; f.	EAX = 2
 
@@ -93,8 +93,8 @@ Use the following data definitions for Question 5
 7.) Copy a string in Reverse Order.
      Write a program with a loop and indirect addressing that copies a string from source to target, reversing the character order in the process. Use the following variables:
 
-	source	BYTE		“This is the source string”, 0
-	target		BYTE		SIZEOF   source   DUP ( ‘ # ’ )
+	source	BYTE  “This is the source string”, 0
+	target	BYTE  SIZEOF   source   DUP ( ‘ # ’ )
 
 
 ExitProcess proto
