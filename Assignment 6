@@ -1,0 +1,84 @@
+Problem #7.
+
+INCLUDE Irvine32.inc
+
+.data
+rows WORD ?
+cols WORD ?
+
+.code
+main PROC
+	call Clrscr
+	mov ecx, 100
+	L1:
+		call GetMaxXY
+		mov rows, ax
+		mov cols, dx
+
+	movzx eax,rows
+	call RandomRange
+	mov dh, al
+
+	movzx eax, cols
+	call RandomRange
+	mov dl, al
+	
+	call Gotoxy
+
+	mov al, ‘O’
+	call WriteChar
+
+	mov eax, 100
+	call Delay
+
+	Loop L1
+	call WaitMsg
+
+	call ExitProcess
+main endp
+end main
+
+
+Problem #10
+
+ExitProcess proto
+WriteInt64    proto
+Crlf               proto
+
+.data
+	nMinus2 QWORD 0
+	nMinus1 QWORD 1
+	n             QWORD ?
+
+.code
+main proc
+	mov rcx, 47
+
+	mov rax, nMinus2
+	call WriteInt64
+	call Crlf
+
+	mov rax, nMinus1
+	call WriteInt 64
+	call Crlf
+
+	STARTLOOP:
+		mov r9, nMinus2
+		add r9, nMinus1
+		mov n, r9
+
+		mov rax, n
+		call WriteInt64
+		call Crlf
+
+		mov r9, nMinus1
+		mov nMinus2, r9
+
+		mov r9, n
+		mov nMinus1, r9
+	LOOP STARTLOOP
+	mov ecx, 0
+
+	call ExitProcess
+main endp
+end main	
