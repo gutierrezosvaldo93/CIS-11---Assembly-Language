@@ -1,0 +1,109 @@
+						CIS 11
+					Assignment 7
+
+5.) Create a program that functions as a simple boolean calculator for 32-bit integers. It should display a menu that asks the user to make a selection for the following list:
+1.x AND y
+2. x OR y
+3. NOT x
+4. x XOR y
+5. Exit program
+
+ExitProcess PROTO
+WriteString PROTO
+ReadString PROTO
+Crlf PROTO
+Str_compare PROTO
+XYAND PROTO
+XYOR PROTO
+NOTX PROTO
+XXORY PROTOX
+
+.code
+main proc
+	mov rdx, OFFSET Firstmenu
+	call WriteString
+	call Crlf 
+	mov rdx, OFFSET Secondmenu
+	call WriteString
+	call Crlf 
+
+	mov rdx, OFFSET Thirdmenu
+	call WriteString
+	call Crlf 
+	mov rdx, OFFSET Fourthmenu
+	call WriteString
+	call Crlf 
+
+	mov rdx, OFFSET Fifthmenu
+	call WriteString
+	call Crlf 
+	mov rdx, OFFSET choice
+	mov rcx, 2
+	call ReadString
+
+	mov rbx, OFFSET caseTable
+	mov rcx, numberOfEntries
+	moved r8, BYTE PTR [choice]
+
+	L1:
+		movzx r9, BYTE PTR [rbx]
+		cmp r8, r9
+		jne L2
+		call NEAR PTR [rbx + 1]
+		call WriteString
+		call Crlf
+		jmp L3
+
+	L2:
+		add rbx, entrySize
+		loop L1
+
+	L3:
+		call ExitProcess
+
+	mov ecx, 0
+	call ExitProcess
+main endp
+
+Process_1 PROC
+	mov rdx, OFFSET msg1
+	call WriteString
+	ret
+Process_1 ENDP
+
+Process_2 PROC
+	mov rdx, OFFSET msg2
+	call WriteString
+	ret
+Process_2 ENDP
+
+Process_3 PROC
+	mov rdx, OFFSET msg3
+	call WriteString
+	ret
+Process_3 ENDP
+
+Process_4 PROC
+	mov rdx, OFFSET msg4
+	call WriteString
+	ret
+Process_4 ENDP
+
+Process_5 PROC
+	mov rdx, OFFSET msg5
+	call WriteString
+	ret
+Process_5 ENDP
+endp
+
+
+6.) Continue the solution program from Exercise 5 by implementing the following procedures:
+
+*And_op: Prompt the user for two hexadecimal integers. AND them together and display the result in hexadecimal.
+
+*OR_op: Prompt the user for two hexadecimal integers. OR them together and display the result in hexadecimal.
+
+*NOT_op: Prompt the user for a hexadecimal integer. NOT the integer and display the result in hexadecimal.
+
+*XOR_op: Prompt the user for two hexadecimal integers. Exclusive-OR them together and display the result in hexadecimal.
+(The Irvine32 library is required for this solution program.)
