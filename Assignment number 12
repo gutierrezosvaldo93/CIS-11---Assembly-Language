@@ -2,6 +2,7 @@ ExitProcess PROTO
 .data
 myArray    QWORD 10d,20d,30d,40d
 finalArray QWORD 4 DUP(0)
+
 .code
 main proc
 
@@ -40,17 +41,18 @@ main proc
 		inc rsi
 	LOOP POOPLOOP
 
-	; figure this part until call write int 64 out
-		mov rcx, 4
-		mov rsi, 0
+
+	mov rcx, 4
+	mov rsi, 0
 	StartLoop:
 
 		mov rax, rsi
 		mul r15
 		mov rdi, rax
 		mov rax, finalArray[rdi]
-
-	call WriteInt64
-	call ExitProcess
+		call WriteInt64
+	EndLoop
+	
+		call ExitProcess
 main endp
 end
