@@ -1,58 +1,67 @@
-ExitProcess PROTO
+						Assignment 12
+						    CIS 11
+
+ExitProcess proto
+WriteInt64 proto
+ReadInt64 proto
+
 .data
-myArray    QWORD 10d,20d,30d,40d
+myArray QWORD 10d, 20d, 30d, 40d
 finalArray QWORD 4 DUP(0)
 
 .code
 main proc
-
-	mov r15, 8	; This is our index multiplier
-
-	; use different register pg 179
-	; print out the array numbers
-	;	mov rcx, 4
-	;	mov rsi, 0
-	;	start loop
-	;	mov rax, rsi
-	;	mul r15
-	;	mov rdi, rax
-	;	mov rax, myArray[rdi]
-	;	call WriteInt64
-	; end loop
-	
+	mov r15, 8
 	mov rcx, 4
-	mov rsi, 0
-	POOPLOOP:
-		
-		mov rax, rsi
-		mul r15
-		mov rdx, myArray[rax]
-
-		cmp rsi, 3
-		je HandleLast
-
-		mov finalArray[rax + 8], rdx
-		jmp EndLoop
+	mov rbx, 0
+L1:
+	mov rax, rbx
+	mul r15
 	
-		HandleLast:
-		mov finalArray[0], rdx
+	mov r13, rax
+	mov rax, myArray[r13]
+	
+	call WriteInt64
+	inc rbx
+loop L1
 
-		EndLoop:
-		inc rsi
-	LOOP POOPLOOP
-
-
+	mov r15, 8
 	mov rcx, 4
-	mov rsi, 0
-	StartLoop:
+	mov rbx, 0
 
-		mov rax, rsi
-		mul r15
-		mov rdi, rax
-		mov rax, finalArray[rdi]
-		call WriteInt64
-	EndLoop
+WRAPLOOP:
+	mov rax, rbx
+	mul r15
 	
-		call ExitProcess
+	mov r13, rax
+	mov rax, r13
+	add rax, 8
+	
+	mov r14, myArray[r13]
+	mov finalArray[rax], r14
+	
+	mov r14, myArray[r13]
+	mov finalArray[0], r14
+	add rbx, 1
+loop WRAPLOOP
+	call ReadInt 64
+	
+	mov r15, 8
+	mov rcx, 4
+	mov rbx, 0
+	
+PRINTLOOP:
+	mov rax, rbx
+	mul r15
+	
+	mov r13, rax
+	mov rax, finalArray[r13]
+	
+	call WriteInt64
+	inc rbx
+loop PRINTLOOP
+	call ReadInt64
+	
+	call ExitProcess
 main endp
 end
