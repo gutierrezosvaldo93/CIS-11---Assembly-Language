@@ -6,7 +6,6 @@ Given an array of 8-byte integers, sort the array using the Bubble Sort algorith
 and after the sort takes place. If you are unable to attend the lecture where the algorithm is presented, 
 you can find it here: https://www.geeksforgeeks.org/bubble-sort/
 
-
 ExitProcess proto
 WriteInt64 proto
 Crlf  proto
@@ -16,72 +15,49 @@ myArray QWORD 5,1,4,2,8
 
 .code
 main proc
-
         mov rcx, LENGTHOF myArray
-        mov rsi, 0
-        
+        mov rsi, 0        
 FIRSTLOOP:
-
         mov rax, myArray[rsi * 8]
         
         call WriteInt64
         inc rsi
-
 LOOP FIRSTLOOP
-
         call Crlf
         
-        mov rcx, LENGTH OF myArray
-        
+        mov rcx, LENGTHOF myArray       
 SECONDLOOP:
-
         mov r15, rcx
         mov rcx, LENGTHOF myArray
         dec rcx
-        mov rsi, 0
-        
-                INNERLOOP:
-                        
-                        mov r9, myArray[rsi * 8]
-                        mov r11, rsi
-                        inc r11
-                        mov r10, myArray[r11 * 8]
-                        cmp r9 , r10
-                        jle ENDLOOP
-                        
-                        SWAP:
-                        
-                              mov r13, r9
-                              mov myArray[rsi * 8], r10
-                              mov myArray[r11 * 8], r13
-                              
-                        ENDLOOP:
-                        
-                        inc rsi
-                        
-                Loop INNERLOOP
-                
-                mov rcx, r15
-        
+        mov rsi, 0     
+        INNERLOOP:                      
+			   mov r9, myArray[rsi * 8]
+               mov r11, rsi
+               inc r11
+               mov r10, myArray[r11 * 8]
+               cmp r9 , r10
+               jle ENDLOOP                     
+               SWAP:                        
+                   mov r13, r9
+                   mov myArray[rsi * 8], r10
+                   mov myArray[r11 * 8], r13                              
+               ENDLOOP:                       
+               inc rsi                        
+        Loop INNERLOOP                
+        mov rcx, r15        
 lOOP SECONDLOOP  
-
         mov rcx, LENGTHOF myArray
-        mov rsi, 0
-        
-THIRDLOOP:
-        
+        mov rsi, 0        
+THIRDLOOP:        
         mov rax, myArray[rsi * 8]
                   
-        CallWriteInt64
-        inc rsi
-                  
+        call WriteInt64
+        inc rsi                  
 LOOP THIRDLOOP
-
         call Crlf
         
         call ExitProcess
 main endp
-end
-                  
-                  
-                  
+end 
+                                                   
