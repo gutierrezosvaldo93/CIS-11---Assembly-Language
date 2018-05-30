@@ -44,7 +44,7 @@ WRAPLOOP:
 	mov finalArray[0], r14
 	add rbx, 1
 loop WRAPLOOP
-	call ReadInt 64
+	call ReadInt64
 	
 	mov r15, 8
 	mov rcx, 4
