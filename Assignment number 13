@@ -31,8 +31,8 @@ SECONDLOOP:
         mov rcx, LENGTHOF myArray
         dec rcx
         mov rsi, 0     
-        INNERLOOP:                      
-			   mov r9, myArray[rsi * 8]
+        INNERLOOP:                   
+	       mov r9, myArray[rsi * 8]
                mov r11, rsi
                inc r11
                mov r10, myArray[r11 * 8]
